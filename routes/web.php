@@ -12,5 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/contacts', 'ContactsController@index')->name('contact_index');
+Route::get('/contact/create', 'ContactsController@create')->name('contact_create');
+Route::post('/contact/store', 'ContactsController@store')->name('contact_store');
+Route::get('/contact/{id}/edit', 'ContactsController@edit')->name('contact_edit');
+Route::post('/contact/{id}/update', 'ContactsController@update')->name('contact_update');
+Route::get('/contact/{id}/delete', 'ContactsController@softDelete')->name('contact_soft_delete');
+Route::get('/contact/{slug}', 'ContactsController@detail')->name('contact_detail');
+
+Route::get('/activity/log', 'ContactsController@activityLog')->name('activity_log');
