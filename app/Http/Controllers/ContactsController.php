@@ -7,6 +7,7 @@ use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Schema;
+use JeroenDesloovere\VCard\VCard;
 
 /**
  * Class ContactsController
@@ -134,5 +135,15 @@ class ContactsController extends Controller
         $activities = $this->contacts->getActivityLog($user->id,$params);
 
         return view('contacts.activity',compact('activities'));
+    }
+
+    /**
+     * Export contact in vcard format
+     *
+     * @param $id
+     */
+    public function export($id)
+    {
+       return $this->contacts->exportContact($id);
     }
 }

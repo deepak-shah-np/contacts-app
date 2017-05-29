@@ -9,13 +9,6 @@
 
                     <div class="panel-body">
 
-                        {!! Form::open(["route"=>'activity_log','method'=>'get',"class"=>"form-horizontal"]) !!}
-
-                            <input name="from" type="date">
-                            <input name="to" type="date">
-                            <input type="submit">
-                        {!! Form::close() !!}
-
 
                         @foreach($activities as $activity)
                             <?php $properties = json_decode($activity->properties,true);  ?>

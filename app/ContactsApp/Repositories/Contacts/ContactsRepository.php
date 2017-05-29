@@ -126,11 +126,6 @@ class ContactsRepository implements ContactsRepositoryInterface
     public function getActivityLog($id,$params)
     {
 
-        $query =  $this->activity->where('subject_id',$id)
-                    ->where('created_at','>=',$params['from'])
-                    ->where('created_at','<=',$params['to']);
-
-
-         dd($query->toSql());
+        return  $this->activity->where('subject_id',$id)->get();
     }
 }

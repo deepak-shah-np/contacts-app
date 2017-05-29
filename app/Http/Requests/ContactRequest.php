@@ -28,7 +28,7 @@ class ContactRequest extends FormRequest
         $user = Auth::user();
         return [
             'name' => 'required',
-            'email' => 'required|email|unique:users,email,'.$user->id,
+            'email' => 'required|email|unique:contacts,email,'.$user->id,
             'phone' =>'required|unique:contacts,phone,'.$user->id,
             'address' => 'required',
             'company'=>'required',
