@@ -10,6 +10,7 @@ namespace App\ContactsApp\Services;
 
 
 use App\ContactsApp\Repositories\Contacts\ContactsRepositoryInterface;
+use JeroenDesloovere\VCard\VCard;
 
 /**
  * Logic and data formatting of contacts data
@@ -23,14 +24,20 @@ class ContactsService
      * @var ContactsRepositoryInterface
      */
     private $contacts;
+    /**
+     * @var VCard
+     */
+    public $vcard;
 
     /**
      * ContactsService constructor.
      * @param ContactsRepositoryInterface $contacts
+     * @param VCard $vcard
      */
-    public function __construct(ContactsRepositoryInterface $contacts)
+    public function __construct(ContactsRepositoryInterface $contacts,VCard $vcard)
     {
         $this->contacts = $contacts;
+        $this->vcard = $vcard;
     }
 
 
@@ -150,9 +157,40 @@ class ContactsService
         return $this->contacts->getDetail($slug);
     }
 
-    public function getActivityLog($id,$params)
+    /**
+     * Get all the activity log of user
+     * @param $id
+     * @param $params
+     * @return mixed
+     */
+    public function getActivityLog($id, $params)
     {
         return $this->contacts->getActivityLog($id,$params);
+    }
+
+    /**
+     * Export contact in vcard
+     *
+     * @param $id
+     */
+    public function exportContact($id)
+    {
+       // $contact = $this->getContact($id);
+        $contacts = $this->contacts->getAllContacts();
+        foreach ($contacts as $contact)
+        {
+
+        $this->vcard->addName($contact->name);
+        $this->vcard->addEmail($contact->email);
+        $this->vcard->addPhoneNumber($contact->phone);
+        $this->vcard->addAddress($contact->address);
+        $this->vcard->addCompany($contact->company);
+        $this->vcard->addBirthday($contact->birth_date);
+
+        }
+
+        return $this->vcard->download();
+
     }
 
 }

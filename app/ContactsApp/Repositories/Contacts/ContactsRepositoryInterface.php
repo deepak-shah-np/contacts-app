@@ -59,4 +59,6 @@ interface ContactsRepositoryInterface
     public function getDetail($slug);
 
     public function getActivityLog($id,$params);
+
+
 }
