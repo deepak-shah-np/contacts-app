@@ -100,9 +100,12 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'email' => [
+            'uniqueattr' => 'The email has already been taken.',
         ],
+        'phone'=>[
+            'uniqueattr' => 'The phone has already been taken.',
+        ]
     ],
 
     /*

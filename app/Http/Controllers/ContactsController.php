@@ -21,10 +21,15 @@ class ContactsController extends Controller
      * @var ContactsService
      */
     public $contacts;
+    /**
+     * @var Auth
+     */
+    protected $user;
 
     /**
      * ContactsController constructor.
      * @param ContactsService $contacts
+     * @param Auth $user
      */
     public function __construct(ContactsService $contacts)
     {
@@ -33,9 +38,14 @@ class ContactsController extends Controller
     }
 
 
+    /**
+     * Return all the contacts data
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
-        $contacts = $this->contacts->getAllContacts();
+        $userId = auth()->user()->id;
+        $contacts = $this->contacts->getAllContacts($userId);
         return view('contacts.index',compact('contacts'));
     }
 

@@ -25,7 +25,7 @@ interface ContactsRepositoryInterface
      * Return collection of contacts object
      * @return mixed
      */
-    public function getAllContacts();
+    public function getAllContacts($userId);
 
     /**
      * Return the object of specific contact

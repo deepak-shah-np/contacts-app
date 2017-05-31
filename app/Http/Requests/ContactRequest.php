@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use App\User;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ContactRequest extends FormRequest
@@ -25,14 +26,27 @@ class ContactRequest extends FormRequest
      */
     public function rules()
     {
+
         $user = Auth::user();
-        return [
+       /* return [
             'name' => 'required',
             'email' => 'required|email|unique:contacts,email,'.$user->id,
             'phone' =>'required|unique:contacts,phone,'.$user->id,
             'address' => 'required',
             'company'=>'required',
             'birth_date'=>'required'
+        ];*/
+
+
+
+        return [
+            'name' => 'required',
+            'email' => 'required|email|uniqueattr:'.$this->segment(2),
+            'phone' => 'required|uniqueattr:'.$this->segment(2),
+            'address' => 'required',
+            'company'=>'required',
+            'birth_date'=>'required'
         ];
+
     }
 }

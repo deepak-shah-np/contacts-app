@@ -24,7 +24,7 @@ class Contacts extends Model
      *
      * @var array
      */
-    protected $fillable = ['name','email','phone','address','company','birth_date'];
+    protected $fillable = ['user_id','name','email','phone','address','company','birth_date'];
     /**
      * The attributes that should be mutated as date
      *

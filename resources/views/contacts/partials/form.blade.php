@@ -1,3 +1,5 @@
+<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+
 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
     <label for="name" class="col-md-4 control-label">@lang('contact.name')</label>
 

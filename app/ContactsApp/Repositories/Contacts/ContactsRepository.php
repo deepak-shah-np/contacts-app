@@ -63,9 +63,11 @@ class ContactsRepository implements ContactsRepositoryInterface
      * Return collection of contacts object
      * @return mixed
      */
-    public function getAllContacts()
+    public function getAllContacts($userId)
     {
-        return $this->contacts->get();
+        return $this->contacts
+            ->where('user_id',$userId)
+            ->get();
     }
 
     /**

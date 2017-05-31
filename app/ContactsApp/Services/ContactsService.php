@@ -57,9 +57,9 @@ class ContactsService
      * Return array of contacts
      * @return array
      */
-    public function getAllContacts()
+    public function getAllContacts($userId)
     {
-        $contacts= $this->contacts->getAllContacts();
+        $contacts= $this->contacts->getAllContacts($userId);
 
         $data=[];
         foreach ($contacts as $contact)
@@ -125,6 +125,7 @@ class ContactsService
     private function formatData($formData)
     {
         return [
+            'user_id'=>$formData['user_id'],
             'name' => $formData['name'],
             'email' => $formData['email'],
             'phone' => $formData['phone'],
