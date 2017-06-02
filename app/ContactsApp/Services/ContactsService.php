@@ -164,34 +164,11 @@ class ContactsService
      * @param $params
      * @return mixed
      */
-    public function getActivityLog($id, $params)
+    public function getActivityLog($id)
     {
-        return $this->contacts->getActivityLog($id,$params);
+        return $this->contacts->getActivityLog($id);
     }
 
-    /**
-     * Export contact in vcard
-     *
-     * @param $id
-     */
-    public function exportContact($id)
-    {
-       // $contact = $this->getContact($id);
-        $contacts = $this->contacts->getAllContacts();
-        foreach ($contacts as $contact)
-        {
 
-        $this->vcard->addName($contact->name);
-        $this->vcard->addEmail($contact->email);
-        $this->vcard->addPhoneNumber($contact->phone);
-        $this->vcard->addAddress($contact->address);
-        $this->vcard->addCompany($contact->company);
-        $this->vcard->addBirthday($contact->birth_date);
-
-        }
-
-        return $this->vcard->download();
-
-    }
 
 }

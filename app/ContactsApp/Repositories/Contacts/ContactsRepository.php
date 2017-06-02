@@ -125,7 +125,7 @@ class ContactsRepository implements ContactsRepositoryInterface
         return $this->contacts->where('slug',$slug)->first();
     }
 
-    public function getActivityLog($id,$params)
+    public function getActivityLog($id)
     {
 
         return  $this->activity->where('subject_id',$id)->get();

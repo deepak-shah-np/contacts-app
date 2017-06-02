@@ -136,24 +136,12 @@ class ContactsController extends Controller
 
     public function activityLog(Request $request)
     {
-        $params = [
-            'from'=>$request->get('from',date('Y-m-d')),
-            'to'=>$request->get('to',date('Y-m-d'))
-        ];
 
         $user = Auth::user();
-        $activities = $this->contacts->getActivityLog($user->id,$params);
+        $activities = $this->contacts->getActivityLog($user->id);
 
         return view('contacts.activity',compact('activities'));
     }
 
-    /**
-     * Export contact in vcard format
-     *
-     * @param $id
-     */
-    public function export($id)
-    {
-       return $this->contacts->exportContact($id);
-    }
+
 }

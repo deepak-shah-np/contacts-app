@@ -27,18 +27,6 @@ class ContactRequest extends FormRequest
     public function rules()
     {
 
-        $user = Auth::user();
-       /* return [
-            'name' => 'required',
-            'email' => 'required|email|unique:contacts,email,'.$user->id,
-            'phone' =>'required|unique:contacts,phone,'.$user->id,
-            'address' => 'required',
-            'company'=>'required',
-            'birth_date'=>'required'
-        ];*/
-
-
-
         return [
             'name' => 'required',
             'email' => 'required|email|uniqueattr:'.$this->segment(2),

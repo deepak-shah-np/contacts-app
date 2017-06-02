@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Detail
-                        <a href="{{route('contact_export',['id'=>$contact->id])}}">Export</a>
+
 
                         <button class="download-vcf">Download VCF</button>
                     </div>
