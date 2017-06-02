@@ -13,36 +13,38 @@
                         @foreach($activities as $activity)
                             <?php $properties = json_decode($activity->properties,true);  ?>
                             <ul>
-                                <li>Date : {{$activity->created_at}}</li>
-                                <li>Activity Type: {{$activity->description}}</li>
+                                <li>@lang('contact.date') : {{$activity->created_at}}</li>
+                                <li>@lang('contact.activity_type'): {{$activity->description}}</li>
                                 <li>
-                                    New Data:
+                                    @lang('contact.new_data'):
                                     <ul>
 
-                                        <li>Name : {{$properties['attributes']['name']}}</li>
-                                        <li>Email : {{$properties['attributes']['email']}}</li>
-                                        <li>Phone : {{$properties['attributes']['phone']}}</li>
-                                        <li>Address : {{$properties['attributes']['address']}}</li>
-                                        <li>Company : {{$properties['attributes']['company']}}</li>
-                                        <li>Birth Data : {{$properties['attributes']['birth_date']}}</li>
+                                        <li>@lang('contact.name') : {{$properties['attributes']['name']}}</li>
+                                        <li>@lang('contact.email') : {{$properties['attributes']['email']}}</li>
+                                        <li>@lang('contact.phone') : {{$properties['attributes']['phone']}}</li>
+                                        <li>@lang('contact.address') : {{$properties['attributes']['address']}}</li>
+                                        <li>@lang('contact.company') : {{$properties['attributes']['company']}}</li>
+                                        <li>@lang('contact.birth_date') : {{$properties['attributes']['birth_date']}}</li>
 
                                     </ul>
 
                                 </li>
+                                @if(isset($properties['old']))
                                 <li>
                                     Old Data:
                                     <ul>
 
-                                        <li>Name : {{$properties['old']['name']}}</li>
-                                        <li>Email : {{$properties['old']['email']}}</li>
-                                        <li>Phone : {{$properties['old']['phone']}}</li>
-                                        <li>Address : {{$properties['old']['address']}}</li>
-                                        <li>Company : {{$properties['old']['company']}}</li>
-                                        <li>Birth Data : {{$properties['old']['birth_date']}}</li>
+                                        <li>@lang('contact.name') : {{$properties['old']['name']}}</li>
+                                        <li>@lang('contact.email') : {{$properties['old']['email']}}</li>
+                                        <li>@lang('contact.phone') : {{$properties['old']['phone']}}</li>
+                                        <li>@lang('contact.address') : {{$properties['old']['address']}}</li>
+                                        <li>@lang('contact.company') : {{$properties['old']['company']}}</li>
+                                        <li>@lang('contact.birth_date') : {{$properties['old']['birth_date']}}</li>
 
                                     </ul>
 
                                 </li>
+                               @endif
                             </ul>
                             <hr>
                         @endforeach

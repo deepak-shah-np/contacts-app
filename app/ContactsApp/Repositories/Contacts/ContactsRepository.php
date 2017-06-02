@@ -125,9 +125,14 @@ class ContactsRepository implements ContactsRepositoryInterface
         return $this->contacts->where('slug',$slug)->first();
     }
 
+    /**
+     * Get all the log activities of specific user
+     * @param $id
+     * @return mixed
+     */
     public function getActivityLog($id)
     {
 
-        return  $this->activity->where('subject_id',$id)->get();
+        return  $this->activity->where('causer_id',$id)->get();
     }
 }

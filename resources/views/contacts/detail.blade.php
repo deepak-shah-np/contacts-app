@@ -6,10 +6,8 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Detail
-
-
-                        <button class="download-vcf">Download VCF</button>
+                        @lang('contact.contact_detail')
+                        <button class="download-vcf">@lang('contact.export_contact')</button>
                     </div>
 
                     <div class="panel-body">

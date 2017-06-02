@@ -11129,6 +11129,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+/**
+ *  Return the head of contact head
+ */
+
 var ContactsHead = function (_React$Component) {
     _inherits(ContactsHead, _React$Component);
 
@@ -11150,47 +11154,47 @@ var ContactsHead = function (_React$Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'th',
                         null,
-                        'S.N'
+                        contactLang.sn
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'th',
                         null,
-                        'Name'
+                        contactLang.name
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'th',
                         null,
-                        'Email'
+                        contactLang.email
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'th',
                         null,
-                        'Phone'
+                        contactLang.phone
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'th',
                         null,
-                        'Address'
+                        contactLang.address
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'th',
                         null,
-                        'Company'
+                        contactLang.company
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'th',
                         null,
-                        'Birth Date'
+                        contactLang.birth_date
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'th',
                         null,
-                        'Age'
+                        contactLang.age
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'th',
                         null,
-                        'Action'
+                        contactLang.action
                     )
                 )
             );
@@ -11199,6 +11203,11 @@ var ContactsHead = function (_React$Component) {
 
     return ContactsHead;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/**
+ * Return the row of contacts
+ */
+
 
 var ContactsRow = function (_React$Component2) {
     _inherits(ContactsRow, _React$Component2);
@@ -11264,17 +11273,17 @@ var ContactsRow = function (_React$Component2) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
                         { href: editUrl },
-                        'Edit'
+                        contactLang.edit
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
                         { href: deleteUrl },
-                        'Delete'
+                        contactLang.delete
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
                         { href: viewUrl },
-                        'Detail'
+                        contactLang.detail
                     )
                 )
             );
@@ -11283,6 +11292,11 @@ var ContactsRow = function (_React$Component2) {
 
     return ContactsRow;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/**
+ * Main contacts table
+ */
+
 
 var ContactsTable = function (_React$Component3) {
     _inherits(ContactsTable, _React$Component3);
@@ -11329,6 +11343,10 @@ var ContactsTable = function (_React$Component3) {
     return ContactsTable;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
+/**
+ * Search bar
+ */
+
 var SearchBar = function (_React$Component4) {
     _inherits(SearchBar, _React$Component4);
 
@@ -11364,6 +11382,10 @@ var SearchBar = function (_React$Component4) {
 
     return SearchBar;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/**
+ * Parent class for search bar and contacttable
+ */
 
 var ContactsList = function (_React$Component5) {
     _inherits(ContactsList, _React$Component5);

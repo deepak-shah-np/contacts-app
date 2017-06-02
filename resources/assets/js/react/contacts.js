@@ -3,21 +3,23 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 
-
+/**
+ *  Return the head of contact head
+ */
  class ContactsHead extends React.Component{
  render(){
      return (
              <thead>
                  <tr>
-                     <th>S.N</th>
-                     <th>Name</th>
-                     <th>Email</th>
-                     <th>Phone</th>
-                     <th>Address</th>
-                     <th>Company</th>
-                     <th>Birth Date</th>
-                     <th>Age</th>
-                     <th>Action</th>
+                     <th>{contactLang.sn}</th>
+                     <th>{contactLang.name}</th>
+                     <th>{contactLang.email}</th>
+                     <th>{contactLang.phone}</th>
+                     <th>{contactLang.address}</th>
+                     <th>{contactLang.company}</th>
+                     <th>{contactLang.birth_date}</th>
+                     <th>{contactLang.age}</th>
+                     <th>{contactLang.action}</th>
                  </tr>
 
              </thead>
@@ -25,8 +27,10 @@ import ReactDom from 'react-dom';
      }
  }
 
-
- class ContactsRow extends React.Component{
+/**
+ * Return the row of contacts
+ */
+class ContactsRow extends React.Component{
  render(){
      let editUrl = app_url+"/contact/"+this.props.contact.id+"/edit";
      let deleteUrl = app_url+"/contact/"+this.props.contact.id+"/delete";
@@ -42,9 +46,9 @@ import ReactDom from 'react-dom';
                  <td>{this.props.contact.birth_date}</td>
                  <td>{this.props.contact.age}</td>
                  <td>
-                     <a href={editUrl}>Edit</a>
-                     <a href={deleteUrl}>Delete</a>
-                     <a href={viewUrl}>Detail</a>
+                     <a href={editUrl}>{contactLang.edit}</a>
+                     <a href={deleteUrl}>{contactLang.delete}</a>
+                     <a href={viewUrl}>{contactLang.detail}</a>
                  </td>
 
              </tr>
@@ -52,7 +56,9 @@ import ReactDom from 'react-dom';
      }
  }
 
-
+/**
+ * Main contacts table
+ */
  class ContactsTable extends React.Component{
     getRows(){
         var self=this;
@@ -86,7 +92,9 @@ import ReactDom from 'react-dom';
  }
 
 
-
+/**
+ * Search bar
+ */
 
 class SearchBar extends React.Component{
     constructor(props){
@@ -111,7 +119,9 @@ class SearchBar extends React.Component{
 }
 
 
-
+/**
+ * Parent class for search bar and contacttable
+ */
 
 class ContactsList extends React.Component{
     constructor(props)

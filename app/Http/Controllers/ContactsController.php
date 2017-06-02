@@ -139,7 +139,6 @@ class ContactsController extends Controller
 
         $user = Auth::user();
         $activities = $this->contacts->getActivityLog($user->id);
-
         return view('contacts.activity',compact('activities'));
     }
 

@@ -5,8 +5,8 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Contacts</div>
-                    <button class="download-all">Export Contacts</button>
+                    <div class="panel-heading">@lang('contact.contacts')</div>
+                    <button class="download-all">@lang('contact.export_contacts')</button>
 
                     <div class="panel-body">
 
@@ -25,6 +25,7 @@
 
     <script>
         var allContacts = {!! json_encode($contacts) !!};
+        var contactLang = {!! json_encode(trans('contact')) !!};
 
     </script>
 
