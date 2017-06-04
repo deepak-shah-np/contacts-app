@@ -28,3 +28,7 @@ Route::get('/contact/{id}/delete', 'ContactsController@softDelete')->name('conta
 Route::get('/contact/{slug}', 'ContactsController@detail')->name('contact_detail');
 
 Route::get('/activity/log', 'ContactsController@activityLog')->name('activity_log');
+
+
+Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
