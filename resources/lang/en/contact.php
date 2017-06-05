@@ -37,6 +37,8 @@ return [
     "activity_type"=>"Activity Type",
     "old_data"=>"Old Data",
     "new_data"=>"New Data",
+    "activity_log"=>"Activity Log",
+    "date"=>"Date",
 
 
 ];

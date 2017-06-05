@@ -1,12 +1,12 @@
 
-$('.download-vcf').on('click',function () {
+$('#download-vcf').on('click',function () {
    var contactData = vCard(contactDetail);
     download(contactDetail['name']+".vcf",contactData);
 
 
 
 });
-$('.download-all').on('click',function () {
+$('#download-all').on('click',function () {
     var data = '';
     $.each(allContacts,function (key,value) {
         data += vCard(value);

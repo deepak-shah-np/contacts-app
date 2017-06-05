@@ -41,5 +41,17 @@ return [
         'redirect'=>env('FB_REDIRECT')
     ],
 
+    'twitter'=>[
+        'client_id'=>env('TWITTER_ID'),
+        'client_secret'=>env('TWITTER_SECRET'),
+        'redirect'=>env('TWITTER_URL')
+    ],
+
+    'twitter'=>[
+        'client_id'=>env('GITHUB_ID'),
+        'client_secret'=>env('GITHUB_SECRET'),
+        'redirect'=>env('GITHUB_URL')
+    ],
+
 
 ];

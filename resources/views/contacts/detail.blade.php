@@ -2,22 +2,22 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+        <div class="">
+            <div class="">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        @lang('contact.contact_detail')
-                        <button class="download-vcf">@lang('contact.export_contact')</button>
+                    <div class="panel-heading listheading">
+                        <b>@lang('contact.contact_detail')</b>
+                        <button id="download-vcf" class=" download-all btn btn-success"><i class="fa fa-download "></i>@lang('contact.export_contact')</button>
                     </div>
 
                     <div class="panel-body">
                         <div class="detail">
-                            <p>Name : {{$contact->name}} </p>
-                            <p>Email: {{$contact->email}}</p>
-                            <p>Phone: {{$contact->phone}}</p>
-                            <p>Address: {{$contact->address}}</p>
-                            <p>Company: {{$contact->company}}</p>
-                            <p>Email: {{$contact->birth_date}}</p>
+                            <p><span>Name </span>{{$contact->name}} </p>
+                            <p><span>Email</span> {{$contact->email}}</p>
+                            <p><span>Phone</span> {{$contact->phone}}</p>
+                            <p><span>Address</span> {{$contact->address}}</p>
+                            <p><span>Company</span> {{$contact->company}}</p>
+                            <p><span>Email</span> {{$contact->birth_date}}</p>
                         </div>
 
                     </div>

@@ -2,21 +2,29 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+        <div class="">
+            <div class="">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Activity Log</div>
+                    <div class="panel-heading listheading"><b>@lang('contact.activity_log')</b></div>
 
                     <div class="panel-body">
 
 
                         @foreach($activities as $activity)
                             <?php $properties = json_decode($activity->properties,true);  ?>
-                            <ul>
-                                <li>@lang('contact.date') : {{$activity->created_at}}</li>
-                                <li>@lang('contact.activity_type'): {{$activity->description}}</li>
-                                <li>
-                                    @lang('contact.new_data'):
+
+
+                                    <div class="datatype">
+                                        <span class="date"> <i class="fa fa-calendar"></i> {{$activity->created_at}}</span>
+                                        <span class="activitytype"> {{ucfirst($activity->description)}}</span>
+                                    </div>
+
+                            <ul class="row removeli">
+
+
+
+                                <li class="col-md-6">
+                                    <span class="outerli">@lang('contact.new_data')</span>
                                     <ul>
 
                                         <li>@lang('contact.name') : {{$properties['attributes']['name']}}</li>
@@ -30,8 +38,8 @@
 
                                 </li>
                                 @if(isset($properties['old']))
-                                <li>
-                                    Old Data:
+                                <li class="col-md-6">
+                                    <span class="outerli">@lang('contact.old_data')</span>
                                     <ul>
 
                                         <li>@lang('contact.name') : {{$properties['old']['name']}}</li>
@@ -46,7 +54,7 @@
                                 </li>
                                @endif
                             </ul>
-                            <hr>
+
                         @endforeach
 
 

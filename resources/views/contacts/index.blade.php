@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+        <div class="">
+            <div class="">
                 <div class="panel panel-default">
-                    <div class="panel-heading">@lang('contact.contacts')</div>
-                    <button class="download-all">@lang('contact.export_contacts')</button>
+                    <div class="panel-heading listheading"><b>@lang('contact.contacts')</b></div>
+                    <button id="download-all" class="download-all btn btn-success"><i class="fa fa-download "></i>@lang('contact.export_contacts')</button>
 
                     <div class="panel-body">
 

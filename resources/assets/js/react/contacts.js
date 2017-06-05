@@ -46,9 +46,9 @@ class ContactsRow extends React.Component{
                  <td>{this.props.contact.birth_date}</td>
                  <td>{this.props.contact.age}</td>
                  <td>
-                     <a href={editUrl}>{contactLang.edit}</a>
-                     <a href={deleteUrl}>{contactLang.delete}</a>
-                     <a href={viewUrl}>{contactLang.detail}</a>
+                     <a href={editUrl} title="Edit"> <i className="fa fa-pencil editbtn"></i></a>
+                     <a href={deleteUrl} title="Delete"><i className="fa fa-trash-o deletebtn"></i></a>
+                     <a href={viewUrl} title="Detail"><i className="fa fa-eye detailbtn"></i></a>
                  </td>
 
              </tr>
@@ -80,7 +80,7 @@ class ContactsRow extends React.Component{
 
 
          return(
-             <table className="table table-bordered">
+             <table className="table table-bordered table-responsive">
                  <ContactsHead/>
                  <tbody>
                     {this.getRows()}
@@ -111,6 +111,7 @@ class SearchBar extends React.Component{
                     type="text"
                     placeholder="Search..."
                     value={this.props.filterText}
+                    className="searchinput"
                     onChange={this.handleFilterTextInputChange}
                 />
             </form>
@@ -147,7 +148,10 @@ class ContactsList extends React.Component{
                     filterText={this.state.filterText}
                     onFilterTextInput={this.handleFilterTextInput}
                 />
-                <ContactsTable contacts={this.props.contacts} filterText={this.state.filterText} />
+                <div className="tablewrap">
+                    <ContactsTable contacts={this.props.contacts} filterText={this.state.filterText} />
+
+                </div>
             </div>
         );
     }

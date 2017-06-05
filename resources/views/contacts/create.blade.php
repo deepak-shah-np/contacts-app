@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+        <div class="">
+            <div class="">
                 <div class="panel panel-default">
-                    <div class="panel-heading">@lang('contact.create_contacts')</div>
+                    <div class="panel-heading"><b>@lang('contact.create_contacts')</b></div>
 
                     <div class="panel-body">
 

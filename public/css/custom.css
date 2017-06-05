@@ -1,0 +1,143 @@
+body{
+    background: #ececec;
+}
+
+.navbar.navbar-default{
+    background: #0b233c;
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text, .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    color: rgba(255,255,255,0.95);
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-text:hover, .navbar>.container .navbar-brand:hover, .navbar>.container-fluid .navbar-brand:hover {
+    color: rgba(255,255,255,1);
+}
+
+.login{
+    max-width: 400px;
+    margin: auto
+}
+
+.form-horizontal .control-label.align-left{
+    text-align: left;
+}
+
+.btn-facebook {
+    color: #3b5998 ;
+}
+
+.btn-twitter {
+    color: #55ACEE;
+}
+
+.btn-github {
+    color: #000;
+}
+
+.deletebtn{
+    margin: 0 10px;
+    color: #e74c3c;
+}
+
+.deletebtn:hover{
+    margin: 0 10px;
+    color: #c0392b;
+}
+.detailbtn{
+    margin: 0 10px;
+    color: #3498db;
+}
+
+.detailbtn:hover{
+    margin: 0 10px;
+    color: #2980b9;
+}
+
+
+.editbtn{
+    margin: 0 10px;
+    color: #2ecc71;
+}
+
+.editbtn:hover{
+    margin: 0 10px;
+    color: #27ae60;
+}
+
+.tablewrap{
+    width: 100%;
+    overflow: auto;
+}
+
+.download-all{
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    z-index: 50;
+
+}
+.panel-default{
+    position: relative;
+}
+
+.download-all .fa.fa-download{
+    margin-right: 5px;
+}
+
+.listheading.panel-heading{
+    padding: 14px 15px;
+}
+.searchinput{
+    width: 100%;
+    max-width: 300px;
+    margin-bottom:10px;
+    padding: 5px 10px;
+    float: right;
+
+}
+
+.detail span{
+    display: inline-block;
+    min-width: 90px;
+    font-weight: 700;
+}
+
+.datatype{
+    padding: 15px 0;
+
+}
+.date{
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.activitytype{
+    padding: 5px;
+    background: #2ecc71;
+    font-size: 11px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.outerli{
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.removeli{
+    background: #fafafa;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #ebebeb;
+    padding-left: 0;
+}
+.removeli li{
+    list-style: none;
+}
+
+.removeli ul{
+    margin-top: 10px;
+    padding-left: 0;
+}

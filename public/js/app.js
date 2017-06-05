@@ -11066,11 +11066,11 @@ if (token) {
 /***/ (function(module, exports) {
 
 
-$('.download-vcf').on('click', function () {
+$('#download-vcf').on('click', function () {
     var contactData = vCard(contactDetail);
     download(contactDetail['name'] + ".vcf", contactData);
 });
-$('.download-all').on('click', function () {
+$('#download-all').on('click', function () {
     var data = '';
     $.each(allContacts, function (key, value) {
         data += vCard(value);
@@ -11272,18 +11272,19 @@ var ContactsRow = function (_React$Component2) {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
-                        { href: editUrl },
-                        contactLang.edit
+                        { href: editUrl, title: 'Edit' },
+                        ' ',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-pencil editbtn' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
-                        { href: deleteUrl },
-                        contactLang.delete
+                        { href: deleteUrl, title: 'Delete' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-trash-o deletebtn' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
-                        { href: viewUrl },
-                        contactLang.detail
+                        { href: viewUrl, title: 'Detail' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-eye detailbtn' })
                     )
                 )
             );
@@ -11329,7 +11330,7 @@ var ContactsTable = function (_React$Component3) {
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'table',
-                { className: 'table table-bordered' },
+                { className: 'table table-bordered table-responsive' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactsHead, null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'tbody',
@@ -11374,6 +11375,7 @@ var SearchBar = function (_React$Component4) {
                     type: 'text',
                     placeholder: 'Search...',
                     value: this.props.filterText,
+                    className: 'searchinput',
                     onChange: this.handleFilterTextInputChange
                 })
             );
@@ -11420,7 +11422,11 @@ var ContactsList = function (_React$Component5) {
                     filterText: this.state.filterText,
                     onFilterTextInput: this.handleFilterTextInput
                 }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactsTable, { contacts: this.props.contacts, filterText: this.state.filterText })
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'tablewrap' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactsTable, { contacts: this.props.contacts, filterText: this.state.filterText })
+                )
             );
         }
     }]);
