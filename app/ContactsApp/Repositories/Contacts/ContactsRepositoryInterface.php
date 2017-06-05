@@ -57,7 +57,11 @@ interface ContactsRepositoryInterface
      * @return object
      */
     public function getDetail($slug);
-
+    /**
+     * Get all the log activities of specific user
+     * @param $id
+     * @return mixed
+     */
     public function getActivityLog($id);
 
 

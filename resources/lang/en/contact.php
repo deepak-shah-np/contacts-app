@@ -7,38 +7,37 @@
  */
 
 
-
 return [
-    "name" => "Name",
-    "email" =>"Email",
-    "password"=>"Password",
-    "confirmpassword"=>"Confirm Password",
-    "phone"=> "Phone",
-    "address"=>"Address",
-    "company"=>"Company",
-    "birth_date"=>"Birth Date",
-    "age"=>"Age",
-    "action"=>"Action",
-
-    "contacts" => "Contacts",
+    "name"            => "Name",
+    "email"           => "Email",
+    "password"        => "Password",
+    "confirmpassword" => "Confirm Password",
+    "phone"           => "Phone",
+    "address"         => "Address",
+    "company"         => "Company",
+    "birth_date"      => "Birth Date",
+    "age"             => "Age",
+    "action"          => "Action",
+    
+    "contacts"        => "Contacts",
     "export_contacts" => "Export Contacts",
-    "export_contact" => "Export Contact",
-    "sn"=>"S.N",
-    "action"=>"Action",
-    "detail"=>"Detail",
-    "delete"=>"Delete",
-    "edit"=>"Edit",
-
-
+    "export_contact"  => "Export Contact",
+    "sn"              => "S.N",
+    "action"          => "Action",
+    "detail"          => "Detail",
+    "delete"          => "Delete",
+    "edit"            => "Edit",
+    
+    
     "create_contacts" => "Create Contacts",
-    "contact_detail"=>"Contact Detail",
-
-
-    "activity_type"=>"Activity Type",
-    "old_data"=>"Old Data",
-    "new_data"=>"New Data",
-    "activity_log"=>"Activity Log",
-    "date"=>"Date",
+    "contact_detail"  => "Contact Detail",
+    
+    
+    "activity_type" => "Activity Type",
+    "old_data"      => "Old Data",
+    "new_data"      => "New Data",
+    "activity_log"  => "Activity Log",
+    "date"          => "Date",
 
 
 ];
