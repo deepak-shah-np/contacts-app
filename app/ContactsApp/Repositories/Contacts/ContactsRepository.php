@@ -53,7 +53,6 @@ class ContactsRepository implements ContactsRepositoryInterface
         }
         catch (QueryException $e)
         {
-            dd($e->getMessage());
             return false;
         }
     }

@@ -3,6 +3,11 @@
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hello-deepak/contacts-app/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hello-deepak/contacts-app/?branch=master)
 
+## Requirement
+* PHP 7.1.4
+* Postgressql 9.5
+* Apache2 Or Nginx
+
 ## Install
 
 Contacts App can be cloned from github repository and installed. Follow the procedure given below:
@@ -18,8 +23,7 @@ Contacts App can be cloned from github repository and installed. Follow the proc
 
 
 ## Framework
-The application is written in PHP based on the [Laravel](http://laravel.com) framework, current version of Laravel 
-used for this project is 5.4.
+The application is built on PHP based [Laravel 5.4](http://laravel.com) framework.
  
 
 ## Tools and packages
@@ -58,4 +62,6 @@ PhpUnit is used for unit test. [Mockery](https://github.com/mockery/mockery) is 
 ```
 phpunit
 ```
+
+
 
