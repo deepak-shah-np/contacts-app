@@ -35,6 +35,9 @@ body{
     color: #000;
 }
 
+.btn-google {
+    color: #d62d20;
+}
 .deletebtn{
     margin: 0 10px;
     color: #e74c3c;
